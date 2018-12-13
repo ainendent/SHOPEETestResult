@@ -1,0 +1,50 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://gist.github.com/discover')
+
+WebUI.click(findTestObject('Page_Discover gists  GitHub/a_Sign in (1)'))
+
+WebUI.setText(findTestObject('Page_Sign in to GitHub  GitHub/input_Username or email addres (1)'), '//this is email')
+
+WebUI.setEncryptedText(findTestObject('Page_Sign in to GitHub  GitHub/input_Forgot password_password (1)'), '//this is password')
+
+WebUI.click(findTestObject('Page_Sign in to GitHub  GitHub/input_Forgot password_commit (1)'))
+
+WebUI.click(findTestObject('Object Repository/Page_Discover gists/img_New gist_avatar'))
+
+WebUI.click(findTestObject('Object Repository/Page_Discover gists/a_Your gists'))
+
+WebUI.click(findTestObject('Object Repository/Page_ainendents gists/strong_test_createpublicgist'))
+
+WebUI.click(findTestObject('Object Repository/Page_Test_CreatePublicGist/a_Edit'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Editing test_createpublicgist/input_test_createpublicgist_gi'), 'Test_EditExistingGist')
+
+WebUI.setText(findTestObject('Object Repository/Page_Editing test_createpublicgist/input_test_createpublicgist_gi_17'), 
+    'test_editexistinggist')
+
+WebUI.click(findTestObject('Object Repository/Page_Editing test_createpublicgist/span_div styleposition relativ'))
+
+WebUI.click(findTestObject('Object Repository/Page_Editing test_createpublicgist/span_div styleposition relativ'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Editing test_createpublicgist/div_1div styleposition relativ'), '<div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: 1536px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;div style="position: relative;"&gt;&lt;div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -53px;"&gt;&lt;div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;"&gt;1&lt;/div&gt;&lt;/div&gt;&lt;pre class=" CodeMirror-line " role="presentation" style=""&gt;&lt;span role="presentation" style="padding-right: 0.1px;"&gt;//this is testcase edit existing gist sript&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</span></pre></div>')
+
+WebUI.click(findTestObject('Object Repository/Page_Editing test_createpublicgist/button_Update public gist'))
+
+WebUI.closeBrowser()
+
