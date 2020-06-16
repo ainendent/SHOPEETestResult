@@ -19,10 +19,10 @@ WebUI.navigateToUrl('https://gist.github.com/discover')
 
 WebUI.click(findTestObject('Object Repository/Page_Discover gists  GitHub/a_Sign in'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Sign in to GitHub  GitHub/input_Username or email addres'), '//this is email')
+WebUI.setText(findTestObject('Object Repository/Page_Sign in to GitHub  GitHub/input_Username or email addres'), 'ainendent@gmail.com')
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_Sign in to GitHub  GitHub/input_Forgot password_password'), 
-    '//this is password')
+    '12rwer21s452')
 
 WebUI.click(findTestObject('Object Repository/Page_Sign in to GitHub  GitHub/input_Forgot password_commit'))
 
